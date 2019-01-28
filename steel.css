@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	width: 100%;
+	height: 100%;
+	background: url(espace_profond.jpg) black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	
+	
+	
+	
+	
+	
+}
+html:after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:linear-gradient(top,rgba(0,0,0,1),rgba(0,0,0,0) 100%);
+    background:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0) 100%);
+    pointer-events:none;
+}
+
+main{
+	width: 80%;
+	text-align: center;
+	color: #FFDD00;
+	font-size: 2em;
+	transform:perspective(250px) rotateX(5deg);
+	
+}
+
+.intro {
+	
+	align-items:center;
+	
+	position:relative;
+	top:-50vh;
+}
+.logo{
+	
+	opacity:0;
+	width: 40%;
+  	animation: logo 10s ease-out;
+	z-index: 2;
+	
+
+}
+@keyframes logo {
+      0% { transform: scale(2); opacity: 1; }
+  50% { opacity: 1; }
+100% { transform: scale(0.1); opacity: 0; }
+}
+
+
+
+
+
+p{
+	font-weight: 900;
+}
+.crawl{
+	
+ 	transform-origin: center to bottom;
+    animation:crawl 50s linear;
+	animation-delay: 5s;
+
+}
+
+@keyframes crawl{
+   
+	100% {
+        transform: translateY(-2000px);
+    }  
+}
+.longtime{
+	 color: rgb(75, 213, 238);
+    font-weight: 400;  
+    font-size: 300%;
+	 animation: longtime 6s ease-out 5s;
+	z-index: 1;
+	 opacity: 0;
+}
+	
+    
+@keyframes longtime {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
